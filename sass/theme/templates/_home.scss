@@ -1,0 +1,183 @@
+.front-hero {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url('/wp-content/themes/vanderlinden/images/vanderlinden-header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	@include media-breakpoint-up(sm) {
+		background-attachment: fixed;
+	}
+
+	.hero-logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+		img {
+			margin-bottom: 2rem;
+		}
+		
+		h1 {
+			font-size: 3rem;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+			color: darken($white, 10%);
+
+			@include media-breakpoint-up(sm) {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	.hero-dealers {
+		position: relative;
+		top: 10rem;
+	}
+
+	.hero-dealer {
+		padding: 1rem;
+		position: relative;
+		height: 100%;
+		text-align: center;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+
+.front-main {
+	padding: 4rem 0;
+	background: $white;
+}
+
+.front-awards {
+	padding: 16rem 0 4rem 0;
+	background: url('/wp-content/themes/vanderlinden/images/vanderlinden-awards.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	@include media-breakpoint-up(sm) {
+		background-attachment: fixed;
+	}
+
+	img {
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		color: darken($white, 5%);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+}
+
+.front-promise {
+	padding: 2rem 0;
+	background: #252323;
+	color: $white;
+	text-align: center;
+
+	h2, h3 {
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-family: $font-family-base;
+		font-weight: 700;
+	}
+
+	p {
+		text-transform: uppercase;
+	}
+
+	img {
+		margin-bottom: 1rem;
+		max-width: 93px;
+		width: auto;
+		min-height: 100px;
+	}
+
+	.promise-block {
+		margin-bottom: 2rem;
+	}
+}
+
+.front-dealer-info {
+	padding: 6rem 0;
+	background: url('/wp-content/themes/vanderlinden/images/vanderlinden-dealers.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $white;
+
+	@include media-breakpoint-up(sm) {
+		background-attachment: fixed;
+	}
+
+	h2 {
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+}
+
+.banner-divider {
+	padding: 2rem;
+	background: #1e1e1e;
+	text-align: center;
+	font-family: $headings-font-family;
+	font-size: 2rem;
+	color: $white;
+	text-transform: uppercase;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.front-dealers {
+	.dealer-block {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: #000;
+		min-height: 500px;
+		text-align: center;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) scale(1.2);
+			transition: 0.4s;
+		}
+
+		.dealer-bg {
+			width: auto;
+			height: 100%;
+			opacity: .75;
+		}
+
+		&:hover {
+			.dealer-bg {
+				opacity: .25;
+				transform: translate(-50%,-50%) scale(1.25);
+			}
+		}
+	}
+}

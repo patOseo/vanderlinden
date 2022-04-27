@@ -1,0 +1,36 @@
+#wrapper-navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	background: transparent;
+	transition: 0.5s;
+
+	.v-logo {
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+	&.scrolled {
+		background: #111;
+		
+		.v-logo {
+			opacity: 1;
+		}
+	}
+
+	.navbar-collapse.show {
+		text-align: center;
+		background: #111;
+	}
+}
+
+.navbar-expand-md .navbar-nav {
+	background: transparent;
+	.nav-link {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		font-size: 1.75rem;
+		font-family: $headings-font-family;
+		text-transform: uppercase;
+	}
+}

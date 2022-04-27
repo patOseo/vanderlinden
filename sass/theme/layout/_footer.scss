@@ -1,0 +1,27 @@
+// Footer
+
+footer.site-footer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100vh;
+	padding: 20vh 0;
+	border-bottom: 1rem solid #1e1e1e;
+	background: #293149;
+	color: $white;
+	text-align: center;
+
+	.site-info {
+	
+	}
+
+	img {
+		margin-bottom: 2rem;
+	}
+
+	a {
+		color: $white;
+	}
+}
