@@ -1,3 +1,28 @@
+.home {
+	#wrapper-navbar {
+		background: transparent;
+	
+		.navbar-collapse.show {
+			text-align: center;
+			background: #111;
+		}
+
+		&.scrolled {
+			background: #111;
+			
+			.v-logo {
+				opacity: 1;
+			}
+		}
+	}
+
+	.v-logo {
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+}
+
 .front-hero {
 	position: relative;
 	width: 100%;

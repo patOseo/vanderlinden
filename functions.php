@@ -34,4 +34,11 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+// Woocommerce Support
+function vanderlinden_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'vanderlinden_add_woocommerce_support' );
+
 include_once('functions/acf.php');
+include_once('functions/woocommerce.php');
