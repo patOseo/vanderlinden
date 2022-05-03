@@ -41,58 +41,37 @@ $login_args = array(
 	<div class="<?php echo esc_attr( $container ); ?> h-100" id="content" tabindex="-1">
 
 
-		<?php 
-		// If redirected from Register page, display this message.
-		if(isset($register) && $register == 'success'): ?>
-		<div class="row">
-			<div class="col-12">
-				<div class="alert alert-success">
-					<h5 class="text-center">Your account has been created! You can now log in with the form below using your email and password.</h5>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
-
-		<?php 
-		// If login failed, display this message.
-		if($login == 'failed'): ?>
-		<div class="row">
-			<div class="col-12">
-				<div class="alert alert-danger">
-					<h5 class="mb-0 text-center">Log in failed, invalid credentials. Please try again.</h5>
-				</div>			
-			</div>
-		</div>
-		<?php endif; ?>
-
-		<?php 
-		// If logout successful, display this message.
-		if($logout == 'success'): ?>
-		<div class="row">
-			<div class="col-12">
-				<div class="alert alert-success">
-					<h5 class="text-center">You have successfully logged out.</h5>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
-
-
-
 		<div class="row h-100 justify-content-center align-items-center">
 
-					<div class="col-lg-5">
-						<div class="mb-5 text-center">
-							<a href="/"><img src="/wp-content/themes/vanderlinden/images/vanderlinden-logo.png" alt="Vanderlinden Luxury"></a>
-						</div>
-						<div class="login-box text-light p-4">
-							<h2 class="text-center mb-5">Log In</h2>
-							<div class="shadowbox login-form">
-								<?php wp_login_form($login_args); ?>
-								<p><a href="/wp-login.php?action=lostpassword">Forgot Password?</a></p>
-							</div>
-						</div>
+			<div class="col-lg-5">
+
+				<?php 
+				// If login failed, display this message.
+				if($login == 'failed'): ?>
+					<div class="mb-5 alert alert-danger">
+						<h5 class="mb-0 text-center">Log in failed, invalid credentials. Please try again.</h5>
+					</div>			
+				<?php endif; ?>
+		
+				<?php 
+				// If logout successful, display this message.
+				if($logout == 'success'): ?>
+					<div class="mb-5 alert alert-success">
+						<h5 class="text-center">You have successfully logged out.</h5>
 					</div>
+				<?php endif; ?>
+
+				<div class="mb-5 text-center">
+					<a href="/"><img src="/wp-content/themes/vanderlinden/images/vanderlinden-logo.png" alt="Vanderlinden Luxury"></a>
+				</div>
+				<div class="login-box text-light p-4">
+					<h2 class="text-center mb-5">Log In</h2>
+					<div class="shadowbox login-form">
+						<?php wp_login_form($login_args); ?>
+						<p><a href="/wp-login.php?action=lostpassword">Forgot Password?</a></p>
+					</div>
+				</div>
+			</div>
 
 		</div><!-- .row -->
 

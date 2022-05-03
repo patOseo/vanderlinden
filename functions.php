@@ -40,5 +40,8 @@ function vanderlinden_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'vanderlinden_add_woocommerce_support' );
 
+include_once('functions/login.php');
+include_once('functions/permissions.php');
+include_once('functions/menu.php');
 include_once('functions/acf.php');
 include_once('functions/woocommerce.php');

@@ -46,6 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<!-- The WordPress Menu goes here -->
 				<?php
+				if(!role_client()):
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
@@ -57,8 +58,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'depth'           => 2,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
-				);
+				); endif;
 				?>
+
+				<?php if(role_any()): ?>
+				<div>
+					<ul class="navbar-nav ml-auto">
+						<li class="menu-item nav-item">
+							<a href="/media/" class="nav-link">Media</a>
+						</li>
+						<li class="menu-item nav-item">
+							<a href="/shop/" class="nav-link">Shop</a>
+						</li>
+						<li class="menu-item nav-item">
+							<a href="<?php echo esc_url( wp_logout_url() ); ?>" class="nav-link">Log Out</a>
+						</li>
+					</ul>
+				</div>
+				<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
