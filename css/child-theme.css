@@ -10729,6 +10729,25 @@ footer.site-footer {
     -webkit-transform: translate(-50%, -50%) scale(1.25);
             transform: translate(-50%, -50%) scale(1.25); }
 
+.page-template-login {
+  margin-bottom: 0; }
+  .page-template-login .login-page {
+    padding: 0 !important;
+    background: url("/wp-content/themes/vanderlinden/images/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; }
+  .page-template-login .login-box {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px; }
+    .page-template-login .login-box a {
+      color: #fff; }
+      .page-template-login .login-box a:hover {
+        color: #d9d9d9; }
+    .page-template-login .login-box #wp-submit {
+      font-size: 1rem; }
+
 .login-form label {
   font-family: "Open Sans Condensed", "Open Sans", Arial, sans-serif;
   font-weight: normal; }

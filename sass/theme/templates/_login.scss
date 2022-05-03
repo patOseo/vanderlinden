@@ -1,3 +1,33 @@
+.page-template-login {
+	margin-bottom: 0;
+
+	.login-page {
+		padding: 0 !important;
+		background:url('/wp-content/themes/vanderlinden/images/login.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	.login-box {
+		background: rgba(0,0,0,0.9);
+		border-radius: 8px;
+
+		a {
+			color: $white;
+
+			&:hover {
+				color: darken($white, 15%);
+			}
+		}
+
+		#wp-submit {
+			font-size: 1rem;
+		}
+	}
+}
+
 .login-form {
 	label {
 		font-family: $headings-font-family;
