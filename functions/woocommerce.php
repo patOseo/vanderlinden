@@ -12,8 +12,9 @@ function vanderlinden_non_client_redirect() {
         ! is_user_logged_in()
         && (is_woocommerce() || is_cart() || is_checkout())
     ) {
+    	$login_url = home_url() . '/log-in/?access=denied';
         // feel free to customize the following line to suit your needs
-        wp_redirect(home_url());
+        wp_redirect($login_url);
         exit;
     }
 }

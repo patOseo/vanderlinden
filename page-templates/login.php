@@ -19,6 +19,10 @@ if(isset($_GET['pass'])) {
 	$pass = $_GET['pass'];
 }
 
+if(isset($_GET['access'])) {
+	$access = $_GET['access'];
+}
+
 if(isset($_GET['login'])) {
     $login = $_GET['login'];
 } else {
@@ -52,7 +56,15 @@ $login_args = array(
 						<h5 class="mb-0 text-center">Log in failed, invalid credentials. Please try again.</h5>
 					</div>			
 				<?php endif; ?>
-		
+				
+				<?php
+				// If access denied
+				if(isset($access) && $access == 'denied'): ?>
+					<div class="mb-5 alert alert-danger">
+						<h5 class="mb-0 text-center">You must be logged in to view this page.</h5>
+					</div>			
+				<?php endif; ?>
+
 				<?php 
 				// If logout successful, display this message.
 				if(isset($logout) && $logout == 'success'): ?>
