@@ -10586,6 +10586,9 @@ footer.site-footer {
   .products .product .add-to-cart-container {
     display: none; }
 
+.product_meta > span {
+  display: block; }
+
 .home #wrapper-navbar {
   background: transparent; }
   .home #wrapper-navbar .navbar-collapse.show {
