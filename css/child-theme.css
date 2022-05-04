@@ -10526,13 +10526,16 @@ body {
   body a {
     -webkit-transition: 0.2s;
     transition: 0.2s; }
+    body a:hover {
+      text-decoration: none; }
 
 .wrapper {
   background: #fff; }
 
-#page-wrapper {
+#page-wrapper, #woocommerce-wrapper {
   padding-top: 8rem;
-  padding-bottom: 8rem; }
+  padding-bottom: 8rem;
+  min-height: 100vh; }
 
 #wrapper-navbar {
   background: #111;

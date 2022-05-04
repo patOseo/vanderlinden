@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Login Page
+ * Template Name: Invite Page
 
  */
 
@@ -15,8 +15,8 @@ get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
 
-if(isset($_GET['pass'])) {
-	$pass = $_GET['pass'];
+if(isset($_GET['register'])) {
+	$register = $_GET['register'];
 }
 
 if(isset($_GET['login'])) {
@@ -47,7 +47,7 @@ $login_args = array(
 
 				<?php 
 				// If login failed, display this message.
-				if(isset($login) && $login == 'failed'): ?>
+				if($login == 'failed'): ?>
 					<div class="mb-5 alert alert-danger">
 						<h5 class="mb-0 text-center">Log in failed, invalid credentials. Please try again.</h5>
 					</div>			
@@ -55,18 +55,10 @@ $login_args = array(
 		
 				<?php 
 				// If logout successful, display this message.
-				if(isset($logout) && $logout == 'success'): ?>
+				if($logout == 'success'): ?>
 					<div class="mb-5 alert alert-success">
 						<h5 class="text-center">You have successfully logged out.</h5>
 					</div>
-				<?php endif; ?>
-
-				<?php 
-				// If password set, display this message.
-				if(isset($pass) && $pass == 'set'): ?>
-					<div class="mb-5 alert alert-success">
-						<h5 class="mb-0 text-center">Your password has been set. Log in below:</h5>
-					</div>			
 				<?php endif; ?>
 
 				<div class="mb-5 text-center">

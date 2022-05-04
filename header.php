@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<?php if(!is_page_template('page-templates/login.php')): ?>
-	<div id="wrapper-navbar">
+	<div id="wrapper-navbar" class="sticky-top">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
@@ -61,20 +61,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); endif;
 				?>
 
-				<?php if(role_any()): ?>
-				<div>
-					<ul class="navbar-nav ml-auto">
-						<li class="menu-item nav-item">
-							<a href="/media/" class="nav-link">Media</a>
-						</li>
-						<li class="menu-item nav-item">
-							<a href="/shop/" class="nav-link">Shop</a>
-						</li>
-						<li class="menu-item nav-item">
-							<a href="<?php echo esc_url( wp_logout_url() ); ?>" class="nav-link">Log Out</a>
-						</li>
-					</ul>
-				</div>
+				<?php if(role_client()): ?>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'user-menu',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'user-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 				<?php endif; ?>
 
 		</nav><!-- .site-navigation -->

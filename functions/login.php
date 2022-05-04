@@ -17,3 +17,42 @@ add_filter( 'logout_redirect', function( $url, $query, $user ) {
 	$baseurl = get_site_url();
     return $baseurl . '/log-in/?logout=success';
 }, 10, 3 );
+
+
+// Redirect after password reset
+function wpse_lost_password_redirect() {
+
+    // Check if have submitted
+    $confirm = ( isset($_GET['action'] ) && $_GET['action'] == resetpass );
+
+    if( $confirm ) {
+        wp_redirect( '/log-in/?pass=set' );
+        exit;
+    }
+}
+add_action('login_headerurl', 'wpse_lost_password_redirect');
+
+
+// Customize login screen
+
+function my_login_logo() { ?>
+    <style type="text/css">
+    	.login {
+    		background: url('/wp-content/themes/vanderlinden/images/login.jpg');
+    	}
+    	.login #backtoblog a, .login #nav a {
+    		color: #fff !important;
+    	}
+        #login h1 a, .login h1 a {
+            background-image: url('/wp-content/themes/vanderlinden/images/vanderlinden-logo.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 100%;
+        	padding-bottom: 30px;
+        }
+        #nav, #backtoblog {
+        	display: none;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );

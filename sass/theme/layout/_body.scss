@@ -4,6 +4,10 @@ body {
 
 	a {
 		transition: 0.2s;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -11,7 +15,8 @@ body {
 	background: #fff;
 }
 
-#page-wrapper {
+#page-wrapper, #woocommerce-wrapper {
 	padding-top: 8rem;
 	padding-bottom: 8rem;
+	min-height: 100vh;
 }
