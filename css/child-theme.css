@@ -10579,6 +10579,13 @@ footer.site-footer {
 #woocommerce-wrapper {
   padding-top: 8rem; }
 
+.products .product {
+  padding: 1rem !important;
+  border: 1px solid #eaeaea;
+  border-radius: 4px; }
+  .products .product .add-to-cart-container {
+    display: none; }
+
 .home #wrapper-navbar {
   background: transparent; }
   .home #wrapper-navbar .navbar-collapse.show {
