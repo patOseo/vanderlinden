@@ -38,7 +38,7 @@ add_action('login_headerurl', 'wpse_lost_password_redirect');
 function my_login_logo() { ?>
     <style type="text/css">
     	.login {
-    		background: url('/wp-content/themes/vanderlinden/images/login.jpg');
+    		background: url('/wp-content/themes/vanderlinden/images/login-bg.jpg');
     	}
     	.login #backtoblog a, .login #nav a {
     		color: #fff !important;

@@ -45,3 +45,4 @@ include_once('functions/permissions.php');
 include_once('functions/menu.php');
 include_once('functions/acf.php');
 include_once('functions/woocommerce.php');
+// include_once('functions/image-sizes.php');
